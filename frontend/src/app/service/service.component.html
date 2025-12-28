@@ -1,0 +1,19 @@
+<h2>Submit Data</h2>
+
+<input type="text" placeholder="Username" [(ngModel)]="username">
+<br><br>
+
+<input type="text" placeholder="Password" [(ngModel)]="password">
+<br><br>
+
+<button (click)="saveLogin()">Submit</button>
+
+<hr>
+
+<h2>Stored Data</h2>
+
+<ul>
+  <li *ngFor="let item of logins">
+    {{ item.username }} - {{ item.password }}
+  </li>
+</ul>
